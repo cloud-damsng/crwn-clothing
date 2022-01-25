@@ -11,19 +11,12 @@ import {
 import { Routes } from 'react-router';
 
 import HomePage from './pages/homepage/homepage.component';
-import ShopPage from './pages/shop/shop.component';
-
+//import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
 function App() {
   return ( 
-  <div>
-  <Link to="/invoices"> Invoices </Link> |{" "}
-  <Link to="/shop"> Shop Page </Link>
-  <Outlet/>
-  </div>,
-  <ShopPage/>,
-  <HomePage/>
-     
-     );
+      <HomePage/>
+      );
 }
 
 export default App;
