@@ -36,6 +36,7 @@ class App extends React.Component {
   }
   render(){
   return ( 
+      <Header currentUser = {this.state.currenUser}/>,
       <HomePage/>
       );
 }
