@@ -70,15 +70,7 @@ class SignUp extends React.Component{
                     label='Dispaly Name'
                     required
                     />
-                     <FormInput 
-                    type = 'text'
-                    name = 'displayName'
-                    value = {displayName}
-                    onChange={this.handleChange}
-                    label='Dispaly Name'
-                    required
-                    />
-                        <FormInput 
+                    <FormInput 
                     type = 'email'
                     name = 'email'
                     value = {email}
@@ -95,7 +87,7 @@ class SignUp extends React.Component{
                     required
                     />   
                         <FormInput 
-                    type = 'confirmPassword'
+                    type = 'password'
                     name = 'confirmPassword'
                     value = {confirmPassword}
                     onChange={this.handleChange}

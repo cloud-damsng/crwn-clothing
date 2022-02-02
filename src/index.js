@@ -2,34 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { render } from 'react-dom';
 import './index.css';
-import {BrowserRouter} from 'react-router-dom';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+import {BrowserRouter, Route,Routes} from 'react-router-dom';
+import {Provider} from 'react-redux';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ShopPage from "./pages/shop/shop.component";
-import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component"
-import Invoices from "./routes/invoices";
-import Header from './components/header/header.component';
+import store from './redux/user/store';
 const rootElement = document.getElementById('root');
 
 render(
+<Provider store={store}>
 <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/shop" element={<ShopPage />} />
-      <Route path="/signin" element={<SignInAndSignUpPage />} />
-      <Route path="/header" element={<Header/>} />
-      <Route path="/invoices" element={<Invoices />} />
-      <Route path="*" element={<App />} />
+      <Route>
+      <App />
+      </Route>
     </Routes>
-    
-</BrowserRouter>,
+</BrowserRouter>
+</Provider>,
 rootElement
   
 );
