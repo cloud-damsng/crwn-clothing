@@ -43,20 +43,20 @@ class App extends React.Component {
   return ( 
     <div>
       <Header />
+      <HomePage/>
       <Routes>
       <Route path="/" element={<App />} />,
       <Route path="/shop" element={<ShopPage />} />,
       <Route exact path="/signin" 
-        render ={() =>
-        this.props.currentUser ? (
-        <Navigate to='/' />
-          ) : (
-          <SignInAndSignUpPage/>
-          )
-          } 
-          />
+        render ={(props) =>
+          this.props.currentUser ? (<Navigate to='/' />)
+           : (
+            <SignInAndSignUpPage/>
+            )
+            } 
+            />
       </Routes>
-      <HomePage/>
+      
       </div>
       );
 }
